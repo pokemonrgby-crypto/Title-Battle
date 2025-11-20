@@ -20,11 +20,31 @@ Vercel 프로젝트 설정에서 다음 환경 변수를 추가하세요:
 
 - `GOOGLE_API_KEY`: Google AI Studio에서 발급받은 Gemini API 키
 
-### 배포 방법
+### 배포 방법 (2025년 11월 기준)
 
-1. GitHub 저장소와 Vercel 연결
-2. 환경 변수 설정
-3. 자동 배포
+1. **GitHub 저장소와 Vercel 연결**
+   - Vercel 대시보드에서 'Add New Project' 선택
+   - GitHub 저장소 임포트
+
+2. **프레임워크 자동 감지**
+   - Vercel이 Next.js를 자동으로 감지합니다
+   - Framework Preset: Next.js
+   - Build Command: `next build` (자동 설정됨)
+   - Output Directory: `.next` (자동 설정됨)
+
+3. **환경 변수 설정**
+   - Project Settings → Environment Variables
+   - `GOOGLE_API_KEY` 추가
+
+4. **배포**
+   - 'Deploy' 버튼 클릭
+   - Git push 시 자동 배포
+
+### 주의사항
+
+- **2025년 기준**: `vercel.json` 파일이 제거되었습니다. Vercel은 Next.js 프로젝트를 자동으로 감지하고 최적화된 설정을 적용합니다.
+- **환경 변수**: 모든 환경 변수는 Vercel 대시보드에서 설정해야 합니다.
+- **Node.js 버전**: Vercel은 자동으로 최신 지원 Node.js 버전을 사용합니다 (20.x 이상 권장).
 
 ## 로컬 개발
 
